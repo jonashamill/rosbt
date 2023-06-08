@@ -2,11 +2,11 @@
 
     <rosparam file="$(find rosbt)/config/params.yaml" command="load"/>
 
-    <node name="server_node" pkg="rosbt" type="btserver.py" output="both">
+    <node name="server_node" pkg="rosbt" type="btserver.py" output="screen">
 
     </node>
 
-    <node name="client_node" pkg="rosbt" type="btclient.py" output="both">
+    <node name="client_node" pkg="rosbt" type="btclient.py" output="screen">
 
         <param name="btaddr" value="$(arg btaddr)" />
         
