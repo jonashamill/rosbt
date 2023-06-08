@@ -1,9 +1,15 @@
-jay@Jay-UOBuntu:~/bt_ws$ roslaunch rosbt rosbt.launch 
-... logging to /home/jay/.ros/log/17fe0cf6-064b-11ee-93d9-13fc525590d2/roslaunch-Jay-UOBuntu-28959.log
+jay@Jay-UOBuntu:~/bt_ws$ roslaunch rosbt rosbt.launch \
+> 
+... logging to /home/jay/.ros/log/e1d9cb82-064b-11ee-93d9-13fc525590d2/roslaunch-Jay-UOBuntu-29373.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 
-RLException: [/home/jay/bt_ws/src/rosbt/launch/rosbt.launch] requires the 'btaddr' arg to be set
-The traceback for the exception was written to the log file
-jay@Jay-UOBuntu:~/bt_ws$ 
+RLException: Invalid <node> tag: <param> tag must have one and only one of value/textfile/binfile.. 
+
+Node xml is <node name="client_node" pkg="rosbt" type="btclient.py" output="screen">
+
+        <param name="btaddr" subst_value="true"/>
+        
+    </node>
+The traceback for the excepti

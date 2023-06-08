@@ -8,7 +8,7 @@
 
     <node name="client_node" pkg="rosbt" type="btclient.py" output="screen">
 
-        <param name="btaddr" value="$(arg btaddr)" />
+        <param name="btaddr" subst_value="true" />
         
     </node>
 
