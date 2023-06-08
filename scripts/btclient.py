@@ -14,11 +14,11 @@ def main():
 
     rospy.init_node('btclient')
 
-    try:
-        bdAddr = rospy.get_param('~btaddr')
+    # try:
+    bdAddr = rospy.get_param('~btaddr')
     
-    except: 
-        bdAddr = '3C:21:9C:E0:88:54'
+    # except: 
+    #     bdAddr = '3C:21:9C:E0:88:54'
 
     print ('bt addr set to: ', bdAddr)
 
