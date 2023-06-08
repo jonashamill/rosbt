@@ -1,6 +1,8 @@
+<?xml version="1.0" ?>
+
 <launch>
 
-    <rosparam file="$(find rosbt)/config/params.yaml" command="load"/>
+    <!-- <rosparam file="$(find rosbt)/config/params.yaml" command="load"/> -->
 
     <node name="server_node" pkg="rosbt" type="btserver.py" output="screen">
 
@@ -8,7 +10,7 @@
 
     <node name="client_node" pkg="rosbt" type="btclient.py" output="screen">
 
-        <param name="btaddr" subst_value="true" />
+        <!-- <param name="btaddr" value="$(arg btaddr)" /> -->
         
     </node>
 
