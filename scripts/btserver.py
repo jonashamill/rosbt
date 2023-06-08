@@ -1,9 +1,12 @@
+#!/usr/bin/env python
+
+
 # Server
 
 
 import bluetooth
 from time import sleep
-
+import rospy
 
 
 def main():
