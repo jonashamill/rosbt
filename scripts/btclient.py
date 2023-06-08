@@ -3,10 +3,17 @@
 
 import bluetooth
 from time import sleep
+import rospy
+
 
 def main():
     
-    bdAddr = '3C:21:9C:E0:88:54'
+
+    rospy.init_node('btclient')
+
+    bdAddr = rospy.get_param('~btaddr')
+
+    print ('bt addr set to: ', bdAddr)
 
     port = 1
 
