@@ -1,15 +1,18 @@
 jay@Jay-UOBuntu:~/bt_ws$ roslaunch rosbt rosbt.launch \
-> 
-... logging to /home/jay/.ros/log/e1d9cb82-064b-11ee-93d9-13fc525590d2/roslaunch-Jay-UOBuntu-29373.log
-Checking log directory for disk usage. This may take a while.
-Press Ctrl-C to interrupt
-Done checking log file disk usage. Usage is <1GB.
+bt addr set to:  3C:21:9C:E0:88:54
+Traceback (most recent call last):
+  File "<string>", line 3, in connect
+_bluetooth.error: (113, 'No route to host')
 
-RLException: Invalid <node> tag: <param> tag must have one and only one of value/textfile/binfile.. 
+During handling of the above exception, another exception occurred:
 
-Node xml is <node name="client_node" pkg="rosbt" type="btclient.py" output="screen">
+Traceback (most recent call last):
+  File "/home/jay/bt_ws/src/rosbt/scripts/btclient.py", line 44, in <module>
+    main()
+  File "/home/jay/bt_ws/src/rosbt/scripts/btclient.py", line 28, in main
+    sock.connect ((bdAddr, port))
+  File "<string>", line 5, in connect
+bluetooth.btcommon.BluetoothError: [Errno 113] No route to host
+[client_node-3] process has died [pid 38986, exit code 1, cmd /home/jay/bt_ws/src/rosbt/scripts/btclient.py __name:=client_node __log:=/home/jay/.ros/log/b4aa0e7a-0654-11ee-93d9-13fc525590d2/client_node-3.log].
+log file: /home/jay/.ros/log/b4aa0e7a-0654-11ee-93d9-13fc525590d2/client_node-3*.log
 
-        <param name="btaddr" subst_value="true"/>
-        
-    </node>
-The traceback for the excepti
