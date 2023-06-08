@@ -15,7 +15,7 @@ def main():
     rospy.init_node('btclient')
 
     # try:
-    bdAddr = rospy.get_param('~btaddr')
+    bdAddr = rospy.get_param('btaddr')
     
     # except: 
     #     bdAddr = '3C:21:9C:E0:88:54'

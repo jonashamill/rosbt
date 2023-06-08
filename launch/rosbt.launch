@@ -11,7 +11,8 @@
     <node name="btclient" pkg="rosbt" type="btclient.py" output="screen" >
 
         <!-- <param name="btaddr" value="3C:21:9C:E0:88:54" /> -->
-        <param name="btaddr" value="$(arg btaddr)" />
+        <!-- <param name="btaddr" value="$(arg btaddr)" /> -->
+        <rosparam param='btaddr' subst_value="true"/>
         
     </node>
 
