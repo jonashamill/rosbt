@@ -16,6 +16,7 @@ def main():
 
     # try:
     bdAddr = rospy.get_param('btaddr')
+    mssg = rospy.get_param('mssg')
     
     # except: 
     #     bdAddr = '3C:21:9C:E0:88:54'
@@ -29,7 +30,7 @@ def main():
 
     while (1):
         for i in range(1,5):
-            sock.send ("Hello Blue World!! " + str(i))
+            sock.send (mssg + str(i))
 
             sleep(1)
         
